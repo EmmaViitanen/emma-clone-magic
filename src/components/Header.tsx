@@ -3,7 +3,7 @@ import { Linkedin, Mail } from "lucide-react";
 
 const Header = () => {
   const location = useLocation();
-  
+
   const isActive = (path: string) => {
     if (path === "/" && location.pathname === "/") return true;
     if (path !== "/" && location.pathname.startsWith(path)) return true;
@@ -15,24 +15,24 @@ const Header = () => {
       <div className="flex items-center justify-between px-8 py-6 md:px-12">
         {/* Navigation Links */}
         <nav className="flex items-center gap-6">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={`text-sm font-medium tracking-wider transition-colors hover:text-primary ${
               isActive("/") && location.pathname === "/" ? "text-primary" : "text-foreground"
             }`}
           >
             WORKS
           </Link>
-          <Link 
-            to="/bio" 
+          <Link
+            to="/bio"
             className={`text-sm font-medium tracking-wider transition-colors hover:text-primary ${
               isActive("/bio") ? "text-primary" : "text-foreground"
             }`}
           >
             BIO
           </Link>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className={`text-sm font-medium tracking-wider transition-colors hover:text-primary ${
               isActive("/contact") ? "text-primary" : "text-foreground"
             }`}
@@ -43,8 +43,11 @@ const Header = () => {
 
         {/* Logo */}
         <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-          <span className="text-xl md:text-2xl font-bold tracking-wider text-primary" style={{ fontFamily: "'Arial Black', sans-serif" }}>
-            E.VIITANEN
+          <span
+            className="text-xl md:text-2xl font-bold tracking-wider text-primary"
+            style={{ fontFamily: "'Arial Black', sans-serif" }}
+          >
+            <img src="/logga-01.png" alt="Emma Viitanen Logo" width={200} />
           </span>
         </Link>
 
